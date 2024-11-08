@@ -1,0 +1,81 @@
+/* Evaluate.css */
+.evaluate-container {
+    display: flex;
+    gap: 20px; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+     /* White background with some transparency */
+    /* border-radius: 10px;  */
+    /* Rounded corners */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+    
+    /* Subtle shadow */
+  }
+  
+
+
+
+  .space{
+    margin-bottom: 67px;
+  }
+  .evaluate-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .evaluate-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .evaluate-right-top,
+  .evaluate-right-middle,
+  .evaluate-right-bottom {
+    padding: 10px;
+  }
+  
+  .evaluate-right-top{
+    margin-bottom: 150px;
+  }
+  
+  .result-area {
+    /* background-color: #f0f0f0;  */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace; 
+    white-space: pre-wrap; /* Preserve line breaks */
+  }
+
+
+
+.button {
+  /* ... your existing button styles ... */
+  transition: transform 0.3s ease; /* Add a transition for the hover effect */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.button:hover {
+  transform: translateZ(-10px); /* Move the button slightly back */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow to emphasize the depth */
+}
+
+.button:hover {
+  transform: translateZ(-10px) rotateY(5deg); 
+  /* Rotate slightly on the Y-axis */
+}
+
+.button:hover {
+  transform: translateZ(-10px) skewY(5deg);
+  /* Skew on the Y-axis */
+}
+
+.evaluate-right-middle {
+  perspective: 1000px; 
+}

@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content-area {
+  background-image: url('./images/Designer.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-size: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply; 
+}
+  
+
+  
+  .content-area:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); */
+     /* Translucent black overlay */
+    pointer-events: none; /* Allow interaction with content below */
+    filter: blur(5px); /* Optional: Add a subtle blur effect */
+  }
+  
+  .content-area .navbar {
+    /* You might need to adjust these values based on your navbar's styles */
+    position: relative;
+    z-index: 10; /* Ensure the navbar appears above the background */
+    /* background-color: rgba(255, 255, 255, 0.7);  */
+    /* Slightly opaque white navbar background */
+    padding: 16px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+    /* Add a subtle shadow */
+    /* backdrop-filter: blur(5px);  */
+    /* Add blur to the navbar background */
+  }
+  
+  .content-area * {
+    /* Ensure other elements have good contrast */
+    color: white; 
+    /* White text is typically good for a dark background */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); 
+    /* Add a text shadow for legibility */
+  }
+
+  .content-area .home-left .title {
+    color: white; 
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .content-area .home-right p {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .contactus-container {
+    margin-top: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 80%; /* Adjust this to control the width of the content */
+    margin: 20px auto;
+  }
+  
+  .contactus-top {
+    text-align: center;
+    margin-bottom: 40px; /* Adds more space between the title and the team info */
+  }
+  
+  .contactus-top h1 {
+    font-size: 3rem; /* Makes the title a bit larger */
+    font-weight: bold;
+    color: #ffffff; /* A darker gray for better contrast */
+  }
+  
+  .contactus-bottom {
+    display: flex;
+    justify-content: space-around; /* Evenly distributes team members */
+    /* flex-wrap: wrap;  */
+    /* Allows team members to wrap to the next line if the screen is too narrow */
+    gap: 114px; /* Adds space between team member sections */
+    /* padding-left: 20px; */
+  }
+  
+  .contactus-left,
+  .contactus-middle,
+  .contactus-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content within each section */
+    width: calc(33.33% - 15px); /* Adjust the width of each team member section */
+    text-align: center; /* Centers text within each team member section */
+
+    transition: transform 0.5s ease-in-out; /* Add a transition for the hover effect */
+    transform-style: preserve-3d; /* Enable 3D transformations */
+  }
+
+  .contactus-left:hover,
+  .contactus-middle:hover,
+  .contactus-right:hover {
+  transform: translateZ(-10px); /* Move the section slightly back */
+  box-shadow: 0 10px 20px rgb(255, 255, 255); /* Add a shadow to emphasize the depth */
+}
+  
+  .img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    opacity: 90%;
+    border: 3px solid #fff; /* Adds a white border to the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow to the images */
+    transition: transform 0.5s ease-in-out; 
+    animation: imagePulse 2s infinite; /* Add a pulse animation */
+  }
+
+  @keyframes imagePulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .p {
+    padding-top: 15px;
+    font-weight: 500; /* Makes the text a bit bolder */
+    color: #ffffff; /* A slightly lighter gray for better contrast */
+  }
+

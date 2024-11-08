@@ -1,0 +1,88 @@
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background-color: #f0f0f0; */
+  }
+  
+  .login-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .login-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-page-container form {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Default shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+.login-page-container form:hover {
+    box-shadow: 0 8px 16px rgb(255, 255, 255); /* Larger shadow on hover */
+}
+
+
+  .login-button:hover {
+    
+    transform: scale(1.05); /* Scale up slightly */
+    background-color: #3498db; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .signup-link span {
+    color: #4CAF50;
+  }
+
+  .input-group input:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3); /* Add a subtle glow */
+    animation: inputFocusPulse 1s infinite; /* Add a pulse animation */
+}
+
+@keyframes inputFocusPulse {
+    0% {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    }
+}

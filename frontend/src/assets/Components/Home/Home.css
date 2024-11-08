@@ -1,0 +1,116 @@
+/* Home.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+  /* Add a translucent black overlay */
+}
+
+.home-section {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.home-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left; /* Aligns text to the left */
+  margin-top: -133px;
+}
+
+.home-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 100px;
+  margin-top: -96px;
+}
+
+.home-right p {
+  color: white;
+}
+
+.title {
+  font-size: 3rem; /* Adjust font size */
+  font-weight: bold;
+  color: white; /* Or any color you want */
+  margin-bottom: 10px;
+}
+
+.home-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 101px;
+}
+
+.animate-title {
+  animation: title-appear 1s forwards;
+  animation-delay: 1s; /* Adjust delay as needed */
+}
+
+.animate-paragraph {
+  animation: paragraph-appear 1s forwards;
+  animation-delay: 1s; /* Adjust delay as needed */
+}
+
+.animate-button {
+  animation: button-appear 1s forwards;
+}
+
+@keyframes title-appear {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes paragraph-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes button-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styling (Optional) */
+@media (max-width: 768px) {
+  .home-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-left,
+  .home-right {
+    width: 100%;
+    text-align: center;
+  }
+}

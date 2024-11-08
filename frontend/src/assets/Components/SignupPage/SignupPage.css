@@ -1,0 +1,127 @@
+/* SignupPage.css */
+
+/* Basic Container Styling */
+.signup-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: #f0f0f0;  */
+  font-family: sans-serif; /* Choose a font you like */
+}
+
+/* Form Styling */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 350px; /* Adjust width as needed */
+}
+
+/* Heading Animation */
+.signup-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  animation: headingAppear 1s forwards; /* Add animation to the heading */
+  animation-delay: 0.5s;
+}
+
+@keyframes headingAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Move the heading slightly up initially */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input Field Styling and Focus Animation */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease; /* Add a border transition on focus */
+}
+
+.input-group input:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3); /* Add a subtle glow */
+  animation: inputFocusPulse 1s infinite; /* Add a pulse animation */
+}
+
+@keyframes inputFocusPulse {
+  0% {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Button Styling and Hover Animation */
+.signup-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add a transform transition for the hover effect */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.signup-button:hover {
+  background-color: #3498db;
+  transform: scale(1.05); /* Scale up slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* Login Link Styling */
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.login-link span {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+/* Form Container Hover Effect */
+.signup-page-container form {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Default shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+.signup-page-container form:hover {
+  box-shadow: 0 8px 16px rgb(255, 255, 255); /* Larger shadow on hover */
+}
